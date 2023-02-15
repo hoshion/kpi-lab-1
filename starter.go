@@ -7,5 +7,7 @@ import (
 
 func Start(port int) {
 	err := http.ListenAndServe(":"+strconv.Itoa(port), nil)
-	HandleError(err)
+	if err != nil {
+		HandleError(err)
+	}
 }

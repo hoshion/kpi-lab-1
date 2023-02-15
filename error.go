@@ -3,7 +3,5 @@ package main
 import "log"
 
 func HandleError(err error) {
-	if err != nil {
-		log.Fatal("ListenAndServe: ", err)
-	}
+	log.Fatal("ListenAndServe: ", err)
 }
