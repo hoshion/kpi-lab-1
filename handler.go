@@ -1,4 +1,4 @@
-package handler
+package main
 
 import (
 	json2 "encoding/json"
