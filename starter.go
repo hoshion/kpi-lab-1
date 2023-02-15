@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
-func Start(port int) error {
-	return http.ListenAndServe(":"+strconv.Itoa(port), nil)
+func Start(port int) {
+	err := http.ListenAndServe(":"+strconv.Itoa(port), nil)
+	HandleError(err)
 }
