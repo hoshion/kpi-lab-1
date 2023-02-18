@@ -13,7 +13,7 @@ func HandleTime(w http.ResponseWriter, r *http.Request) {
 
 	var currentTime = time.Now()
 	var resp = make(map[string]string)
-	resp["time"] = currentTime.Format(time.RFC3339)
+	resp["time"] = currentTime.Format("2006-01-02T15:04:05Z")
 	var json, err = json2.Marshal(resp)
 
 	if err != nil {
